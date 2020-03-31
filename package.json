@@ -29,6 +29,9 @@
     "nyc": "^15.0.0"
   },
   "nyc": {
+    "functions": 80,
+    "lines": 80,
+    "check-coverage": true,
     "reporter": [
       "text",
       "html"
@@ -39,7 +42,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run lint"
+      "pre-push": "npm run lint && npm run test:coverage"
     }
   }
 }
